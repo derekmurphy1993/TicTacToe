@@ -4,8 +4,10 @@
 // const example = require('./example')
 
 // use require without a reference to ensure a file is bundled
-// require('./example')
+// const authEvents = require('./auth-scripts/events')
+const logicEvents = require('./logic-scripts/events')
 
 $(() => {
-  // your JS code goes here
+  // authEvents.addHandlers()
+  logicEvents.addHandlers()
 })
