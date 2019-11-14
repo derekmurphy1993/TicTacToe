@@ -1,0 +1,7 @@
+//Styling for the game gameboard
+@import './style_variables';
+
+.col-4 {
+  background-color: $squares;
+  color: $sq-text;
+}
