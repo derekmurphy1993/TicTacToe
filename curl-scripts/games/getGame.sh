@@ -1,6 +1,5 @@
 #!/bin/bash
 
-curl --include --request PATCH "https://sei-library-api.herokuapp.com/books/" \
-  --header "Content-type: application/json" \
-  --data '{}'
+curl --include --request GET "https://tic-tac-toe-wdi.herokuapp.com/games/${ID}"
+
 echo
