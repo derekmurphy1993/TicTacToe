@@ -11,8 +11,6 @@
   display: block;
 }
 
-$black: #000;
-
 .border {
   border: 3px solid $black;
   margin: 20px;
@@ -21,13 +19,13 @@ $black: #000;
 
 .success {
   background-color: green;
-  color: white;
+  color: $white;
   font-size: 2em;
 }
 
 .failure {
   background-color: red;
-  color: white;
+  color: $white;
   font-size: 2em;
 }
 

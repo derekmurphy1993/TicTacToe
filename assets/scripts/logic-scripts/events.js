@@ -63,16 +63,12 @@ const onPlayerMove = event => {
       $('#playerIcon').css('background-color', 'red')
       $('#feedback').text(`It's now Player X's turn.`)
     }
-    console.log($(event.target).index())
+    console.log($(event.target).attr('ID'))
     currentPlayer = !currentPlayer
   } else {
     $(ui.playerMoveFailure)
   }
 }
-
-// gameboard
-
-const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 // to steamline the module.exports
 const addHandlers = event => {
