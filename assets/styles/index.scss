@@ -1,3 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
 @import './gameboard';
 @import './style_variables';
+
+// commented out for testing
+// .game {
+//   display: none;
+// }
+
+.sign-in {
+  display: block;
+}
+
+$black: #000;
+
+.border {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  font-size: 2em;
+}
+
+.failure {
+  background-color: red;
+  color: white;
+  font-size: 2em;
+}
+
+.after-auth {
+  display: none;
+}
