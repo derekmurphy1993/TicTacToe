@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic Tac Toe</h1>
-      <div class="container">
-<div class="row">
-  <div class="col-4 box"> 0</div>
-  <div class="col-4 box"> 1</div>
-  <div class="col-4 box"> 2</div>
-</div>
-<div class="row">
-  <div class="col-4 box"> 3</div>
-  <div class="col-4 box"> 4</div>
-  <div class="col-4 box"> 5</div>
-</div>
-<div class="row">
-  <div class="col-4 box"> 6</div>
-  <div class="col-4 box"> 7</div>
-  <div class="col-4 box"> 8</div>
-</div>
-  <div class="row">
-  <div class="col-4" id="playerIcon"> x </div>
-  <div class="col-8" id="message">Make The First Move</div>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+<h1>Tic Tac Toe</h1>
+  <!--
+  <div class="container sign-in">
+    <div id="message"></div>
+    <section class="before-auth">
+      <h2> Sign Up!</h2>
+      <form id="sign-up">
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+        <button class="btn btn-primary"> New User </button>
+      </form>
+      <h2> Sign In!</h2>
+      <form id="sign-in">
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <button class="btn btn-primary"> Log In </button>
+      </form></section>
+      <section class="after-auth">
+        <h2>Change Password</h2>
+        <form id="change-password">
+          <input type="text" name="passwords[old]" placeholder="Old Password">
+          <input type="text" name="passwords[new]" placeholder="New Password">
+          <button class="btn btn-primary"> Update </button>
+        </form>
+        <h2>Sign Out</h2>
+        <form id="sign-out">
+          <button class="btn btn-danger"> Sign Out </button>
+        </form>
+  </div> -->
+  <div class="container game">
+    <div class="row">
+      <div class="col-4 box"> 0</div>
+      <div class="col-4 box"> 1</div>
+      <div class="col-4 box"> 2</div>
+    </div>
+    <div class="row">
+      <div class="col-4 box"> 3</div>
+      <div class="col-4 box"> 4</div>
+      <div class="col-4 box"> 5</div>
+    </div>
+    <div class="row">
+      <div class="col-4 box"> 6</div>
+      <div class="col-4 box"> 7</div>
+      <div class="col-4 box"> 8</div>
+    </div>
+    <div class="row">
+      <div class="col-4" id="playerIcon"> x </div>
+      <div class="col-8" id="feedback">Make The First Move</div>
+    </div>
   </div>
-  </div>
-  </body>
+</body>
+
 </html>
