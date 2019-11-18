@@ -1,20 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
-@import './gameboard';
 @import './style_variables';
 
 // commented out for testing
-// .game {
-//   display: none;
-// }
 
-.sign-in {
-  display: block;
+body {
+  display: grid;
+  min-height: 100vh;
 }
 
-.border {
-  border: 3px solid $black;
-  margin: 20px;
-  padding: 20px;
+.box {
+  align-items: center;
+  background-color: $squares;
+  border-bottom: 5px solid $white;
+  border-right: 5px soild $white;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100% / 3);
+
+  :nth-child(3n) {
+    border-right: 0;
+  }
+
+  :nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
+}
+
+.game-board {
+  margin: 0 auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+}
+
+
+.sign-in {
+  display: show;
 }
 
 .success {
@@ -31,4 +52,8 @@
 
 .after-auth {
   display: none;
+}
+
+#playerIcon {
+  background-color: $player-one;
 }
