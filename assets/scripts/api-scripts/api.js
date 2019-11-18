@@ -47,19 +47,27 @@ const newGame = () => {
     url: config.apiUrl + '/games',
     method: 'POST',
     headers: {
-      Authorization: `Token token=${store.user.token}`,
-      data: {
-      }
-    }})
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: {}
+  })
 }
 
-const updateGame = (gameData) => {
+const updateGame = () => {
   return $.ajax({
-    url: config.apiUrl + '/games/:id',
+    url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
-      Authorization: `Token token=${store.user.token}`,
-      data: gameData
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
     }
   })
 }

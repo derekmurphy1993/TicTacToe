@@ -8,11 +8,9 @@ curl 'https://tic-tac-toe-wdi.herokuapp.com/games/:id' \
   --data '{{
   "game": {
     "cell": {
-      "index": 0,
-      "value": "x"
-    },
-    "over": false
-  }
+      "index": "'"${INDEX}"'"
+      "value": "'"${VALUE}"'"
+}
 }
     }'
 echo
