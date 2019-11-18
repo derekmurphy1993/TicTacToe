@@ -5,6 +5,7 @@
 // GAME LOGIC
 const playerMoveSuccess = move => {
   $('#feedback').text('You claimed the square!')
+  // the index and its value gets passed to the stored data
 }
 
 const playerMoveFailure = move => {

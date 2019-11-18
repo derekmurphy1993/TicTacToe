@@ -56,6 +56,7 @@ const onSignOutFailure = () => {
 const newGameSuccess = (gameData) => {
   store.game = gameData.game
   console.log(gameData)
+  $('.gam-board').empty()
 }
 
 const newGameFailure = () => {

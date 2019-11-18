@@ -12,26 +12,27 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+    <h1>Tic Tac Toe</h1>
 
-<h1>Tic Tac Toe</h1>
-
-  <div class="container sign-in">
-    <div id="message"></div>
-    <section class="before-auth">
-      <h2> Sign Up!</h2>
-      <form id="sign-up">
-        <input type="email" name="credentials[email]" placeholder="email">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-        <button class="btn btn-primary"> New User </button>
-      </form>
-      <h2> Sign In!</h2>
-      <form id="sign-in">
-        <input type="email" name="credentials[email]" placeholder="email">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <button class="btn btn-primary"> Log In </button>
-      </form></section>
-<section class="after-auth">
+    <div class="sign-in">
+      <div id="message"></div>
+      <section class="before-auth">
+        <h2> Sign Up!</h2>
+        <form id="sign-up">
+          <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+          <button class="btn btn-primary"> New User </button>
+        </form>
+        <h2> Sign In!</h2>
+        <form id="sign-in">
+          <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <button class="btn btn-primary"> Log In </button>
+        </form>
+      </section>
+      <section class="after-auth">
         <h2>Change Password</h2>
         <form id="change-password">
           <input type="text" name="passwords[old]" placeholder="Old Password">
@@ -42,34 +43,37 @@
         <form id="sign-out">
           <button class="btn btn-danger"> Sign Out </button>
         </form>
-  <form id="new-game">
-  <button class="btn btn-primary"> Start </button>
-</form>
-<form id="update-game">
-<button class="btn btn-primary"> update games </button>
-</form>
-  <div class="container game">
-    <div class="row">
-      <div class="col-4 box" data-cell-index='0'> 0</div>
-      <div class="col-4 box" data-cell-index='1'> 1</div>
-      <div class="col-4 box" data-cell-index='2'> 2</div>
+        <form id="new-game">
+          <button class="btn btn-primary"> Start </button>
+        </form>
+        <form id="update-game">
+          <button class="btn btn-primary"> update games </button>
+        </form>
+      </section>
     </div>
-    <div class="row">
-      <div class="col-4 box" data-cell-index='3'> 3</div>
-      <div class="col-4 box" data-cell-index='4'> 4</div>
-      <div class="col-4 box" data-cell-index='5'> 5</div>
+    <section class="after-auth game">
+      <div class="container-fluid">
+        <div class="row h-100 game-board">
+          <div class="col-4 box" >1</div>
+          <div class="col-4 box" >2</div>
+          <div class="col-4 box" >3</div>
+          <div class="col-4 box" >4</div>
+          <div class="col-4 box" >5</div>
+          <div class="col-4 box" >6</div>
+          <div class="col-4 box" >7</div>
+          <div class="col-4 box" >8</div>
+          <div class="col-4 box" >9</div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4" id="playerIcon"> x </div>
+        <div class="col-8" id="feedback">Make The First Move</div>
+      </div>
     </div>
-    <div class="row">
-      <div class="col-4 box" data-cell-index='6'> 6</div>
-      <div class="col-4 box" data-cell-index='7'> 7</div>
-      <div class="col-4 box" data-cell-index='8'> 8</div>
-    </div>
-    <div class="row">
-      <div class="col-4" id="playerIcon"> x </div>
-      <div class="col-8" id="feedback">Make The First Move</div>
-    </div>
+  </section>
+
   </div>
-</section>
 </body>
 
 </html>
