@@ -14,7 +14,7 @@
 <body>
 
 <h1>Tic Tac Toe</h1>
-  <!--
+
   <div class="container sign-in">
     <div id="message"></div>
     <section class="before-auth">
@@ -31,7 +31,7 @@
         <input type="password" name="credentials[password]" placeholder="password">
         <button class="btn btn-primary"> Log In </button>
       </form></section>
-      <section class="after-auth">
+<section class="after-auth">
         <h2>Change Password</h2>
         <form id="change-password">
           <input type="text" name="passwords[old]" placeholder="Old Password">
@@ -42,28 +42,34 @@
         <form id="sign-out">
           <button class="btn btn-danger"> Sign Out </button>
         </form>
-  </div> -->
+  <form id="new-game">
+  <button class="btn btn-primary"> Start </button>
+</form>
+<form id="update-game">
+<button class="btn btn-primary"> update games </button>
+</form>
   <div class="container game">
     <div class="row">
-      <div class="col-4 box" id="0"> 0</div>
-      <div class="col-4 box" id="1"> 1</div>
-      <div class="col-4 box" id="2"> 2</div>
+      <div class="col-4 box" data-cell-index='0'> 0</div>
+      <div class="col-4 box" data-cell-index='1'> 1</div>
+      <div class="col-4 box" data-cell-index='2'> 2</div>
     </div>
     <div class="row">
-      <div class="col-4 box" id="3"> 3</div>
-      <div class="col-4 box" id="4"> 4</div>
-      <div class="col-4 box" id="5"> 5</div>
+      <div class="col-4 box" data-cell-index='3'> 3</div>
+      <div class="col-4 box" data-cell-index='4'> 4</div>
+      <div class="col-4 box" data-cell-index='5'> 5</div>
     </div>
     <div class="row">
-      <div class="col-4 box" id="6"> 6</div>
-      <div class="col-4 box" id="7"> 7</div>
-      <div class="col-4 box" id="8"> 8</div>
+      <div class="col-4 box" data-cell-index='6'> 6</div>
+      <div class="col-4 box" data-cell-index='7'> 7</div>
+      <div class="col-4 box" data-cell-index='8'> 8</div>
     </div>
     <div class="row">
       <div class="col-4" id="playerIcon"> x </div>
       <div class="col-8" id="feedback">Make The First Move</div>
     </div>
   </div>
+</section>
 </body>
 
 </html>
