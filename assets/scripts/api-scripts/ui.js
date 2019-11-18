@@ -62,6 +62,14 @@ const newGameFailure = () => {
   onFailure('something went wrong')
 }
 
+const updateSuccess = () => {
+  console.log(store.game) // gameDate returns undefined
+}
+
+const updateFailure = () => {
+  console.log('Game Failure', store.game)
+}
+
 module.exports = {
 
   onSignupSuccess,
@@ -73,5 +81,7 @@ module.exports = {
   onSignOutSuccess,
   onSignOutFailure,
   newGameSuccess,
-  newGameFailure
+  newGameFailure,
+  updateSuccess,
+  updateFailure
 }
