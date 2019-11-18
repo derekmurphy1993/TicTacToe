@@ -12,13 +12,13 @@ const onPlayerMove = event => {
     $(ui.playerMoveSuccess)
 
     // HOW DO I FIND THE CURRENT SQUARES INDEX??
-    console.log($('#div.box').index())
 
     if (currentPlayer === true) {
       $(event.target).css('background-color', 'red').text('x').addClass('taken')
       $('#playerIcon').css('background-color', 'blue')
       $('#feedback').text(`It's now Player O's turn.`)
-      apiScript.updateGame(2, 'x')
+      const boxIndex = event.target.ID
+      apiScript.updateGame(boxIndex, 'x')
     } else {
       $(event.target).css('background-color', 'blue').text('o').addClass('taken')
       $('#playerIcon').css('background-color', 'red')

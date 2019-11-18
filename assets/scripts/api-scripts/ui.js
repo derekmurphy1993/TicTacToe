@@ -23,7 +23,6 @@ const onSignupFailure = () => {
 
 const onSigninSuccess = responseData => {
   store.user = responseData.user // store the user data in store.js
-  console.log(store)
   onSuccess('Your Sign In Was Successful')
   $('.after-auth').show()
   $('.before-auth').hide()
@@ -56,7 +55,7 @@ const onSignOutFailure = () => {
 const newGameSuccess = (gameData) => {
   store.game = gameData.game
   console.log(gameData)
-  $('.gam-board').empty()
+  // $('.game-board').empty()
 }
 
 const newGameFailure = () => {
