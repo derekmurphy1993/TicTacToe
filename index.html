@@ -32,7 +32,7 @@
           <button class="btn btn-primary"> Log In </button>
         </form>
       </section>
-      <section class="after-auth">
+      <div class="after-auth">
         <h2>Change Password</h2>
         <form id="change-password">
           <input type="text" name="passwords[old]" placeholder="Old Password">
@@ -43,15 +43,16 @@
         <form id="sign-out">
           <button class="btn btn-danger"> Sign Out </button>
         </form>
+        <div class="before-newgame">
         <form id="new-game">
           <button class="btn btn-primary"> Start </button>
         </form>
-      </section>
-    </div>
-    <section class="after-auth game">
+        </div>
+      <!-- </section> -->
+    <section class="after-newgame">
       <div class="container-fluid">
         <div class="row h-100 game-board">
-          <div class="col-4 box" id="0" >1</div>
+          <div class="col-4 box" id="0">1</div>
           <div class="col-4 box" id="1">2</div>
           <div class="col-4 box" id="2">3</div>
           <div class="col-4 box" id="3">4</div>
@@ -67,9 +68,13 @@
         <div class="col-4" id="playerIcon"> x </div>
         <div class="col-8" id="feedback">Make The First Move</div>
       </div>
+      <div class="row">
+        <div class="col-4"><form id=get-games><button class="btn btn-primary"> Get All Games</button></form></div>
+        <div class="col-4" id="howManyGames"></div>
+        <div class="col-4"></div>
+      </div>
     </div>
   </section>
-
   </div>
 </body>
 
