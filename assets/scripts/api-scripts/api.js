@@ -72,11 +72,19 @@ const updateGame = (currentIndex, value) => {
   })
 }
 
+const thisGame = () => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'GET'
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   newGame,
-  updateGame
+  updateGame,
+  thisGame
 }
