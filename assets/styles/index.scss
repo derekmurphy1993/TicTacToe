@@ -50,7 +50,15 @@ body {
   font-size: 2em;
 }
 
-.after-auth {
+.after-auth{
+  display: none;
+}
+
+.before-newgame {
+  display: none;
+}
+
+.after-newgame {
   display: none;
 }
 
