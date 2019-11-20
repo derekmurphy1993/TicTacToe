@@ -2,11 +2,10 @@
 // Updates the UI
 // const store = require('../store.js')
 const store = require('../store')
-const events = require('./events')
 
 // GAME LOGIC
-const playerMoveSuccess = move => {
-  $('#feedback').text('You claimed the square!')
+const playerMoveSuccess = (player) => {
+  $('#feedback').text('You claimed the square! ' + player)
   // the index and its value gets passed to the stored data
 }
 
@@ -26,7 +25,7 @@ const onFailure = message => {
 }
 
 const onSignupSuccess = () => {
-  onSuccess('Your Sign In Was Successful')
+  onSuccess('Your Sign Up Was Successful, Please Sign In')
 }
 
 const onSignupFailure = () => {
@@ -68,9 +67,8 @@ const onSignOutFailure = () => {
 
 const newGameSuccess = (gameData) => {
   store.game = gameData.game
-  console.log(gameData)
   $('.after-newgame').show()
-  // $('.before-newgame').hide()
+  $('.before-newgame').hide()
 }
 
 const newGameFailure = () => {
@@ -80,11 +78,16 @@ const newGameFailure = () => {
 const onGetGameSuccess = responseData => {
   const games = responseData.games.length
   $('#howManyGames').html(games)
-  console.log(games)
 }
 
 const onGetGameFailure = responseData => {
   console.log('Error: Games Not Found.')
+}
+
+const onGameOver = (overStatment) => {
+  $('.over-statment').html('<h2>' + overStatment + '</h2>')
+  $('.after-newgame').hide()
+  $('.after-game').show()
 }
 
 module.exports = {
@@ -101,5 +104,6 @@ module.exports = {
   newGameSuccess,
   newGameFailure,
   onGetGameSuccess,
-  onGetGameFailure
+  onGetGameFailure,
+  onGameOver
 }

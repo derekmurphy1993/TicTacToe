@@ -13,42 +13,52 @@
 
 <body>
   <div class="container-fluid">
-    <h1>Tic Tac Toe</h1>
-
-    <div class="sign-in">
-      <div id="message"></div>
-      <section class="before-auth">
-        <h2> Sign Up!</h2>
-        <form id="sign-up">
-          <input type="email" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-          <button class="btn btn-primary"> New User </button>
-        </form>
-        <h2> Sign In!</h2>
-        <form id="sign-in">
-          <input type="email" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <button class="btn btn-primary"> Log In </button>
-        </form>
-      </section>
-      <div class="after-auth">
-        <h2>Change Password</h2>
-        <form id="change-password">
-          <input type="text" name="passwords[old]" placeholder="Old Password">
-          <input type="text" name="passwords[new]" placeholder="New Password">
-          <button class="btn btn-primary"> Update </button>
-        </form>
-        <h2>Sign Out</h2>
-        <form id="sign-out">
-          <button class="btn btn-danger"> Sign Out </button>
-        </form>
-        <div class="before-newgame">
-        <form id="new-game">
-          <button class="btn btn-primary"> Start </button>
-        </form>
-        </div>
-      <!-- </section> -->
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div id="message"></div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <section class="before-auth">
+          <div class="sign-in">
+            <h2> Sign Up!</h2>
+            <form id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="email">
+              <input type="password" name="credentials[password]" placeholder="password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+              <button class="btn btn-primary"> New User </button>
+            </form>
+            <h2> Sign In!</h2>
+            <form id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="email">
+              <input type="password" name="credentials[password]" placeholder="password">
+              <button class="btn btn-primary"> Log In </button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="after-auth">
+    <!-- </section> -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+    <div class="before-newgame">
+      <form id="new-game">
+        <button class="btn btn-primary"> Start </button>
+      </form>
+    </div></div></div></div>
     <section class="after-newgame">
       <div class="container-fluid">
         <div class="row h-100 game-board">
@@ -63,18 +73,47 @@
           <div class="col-4 box" id="8">9</div>
         </div>
       </div>
-    <div class="container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4" id="playerIcon"> x </div>
+          <div class="col-8" id="feedback">Make The First Move</div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid h100 after-game">
       <div class="row">
-        <div class="col-4" id="playerIcon"> x </div>
-        <div class="col-8" id="feedback">Make The First Move</div>
+        <div class="col-12 over-statment">
+        </div>
       </div>
       <div class="row">
-        <div class="col-4"><form id=get-games><button class="btn btn-primary"> Get All Games</button></form></div>
-        <div class="col-4" id="howManyGames"></div>
-        <div class="col-4"></div>
+        <div class="col-6">
+          <h1> Game Over </h1>
+          <div class="col-6">
+            <form id="restart-game">
+              <button class="btn btn-primary"> Rematch </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <form id=get-games><button class="btn btn-primary"> Get All Games</button></form>
+        </div>
+        <div class="col-6" id="howManyGames"></div>
       </div>
     </div>
-  </section>
+    <div class="container-fluid">
+      <div class="row"><div class="col-3"></div><div class="col-6">
+    <form id="change-password">
+      <input type="text" name="passwords[old]" placeholder="Old Password">
+      <input type="text" name="passwords[new]" placeholder="New Password">
+      <button class="btn btn-primary"> Update </button>
+    </form> </div><div class="col-3"></div></div>
+    <div class="row"><div class="col-3"></div><div class="col-6">
+    <form id="sign-out">
+      <button class="btn btn-danger"> Sign Out </button>
+    </form> </div><div class="col-3"></div></div>
+    </div>
   </div>
 </body>
 
