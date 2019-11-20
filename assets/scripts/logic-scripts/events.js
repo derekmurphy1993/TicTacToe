@@ -14,19 +14,18 @@ const onPlayerMove = event => {
   // if target does not have the class "taken", add the class and claim the tile
   if (gameOver === false) {
     if (!($(event.target).hasClass('taken'))) {
-      $(ui.playerMoveSuccess)
       const currentBoxId = $(event.target).attr('id')
       counter++
       if (currentPlayer === true) {
+        $(ui.playerMoveSuccess("It's now player O's turn"))
         $(event.target).css('background-color', 'red').text('x').addClass('taken')
         $('#playerIcon').css('background-color', 'blue')
-        $('#feedback').text(`It's now Player O's turn.`)
         api.updateGame(currentBoxId, 'x')
         updateGameBoard(currentBoxId, 'x')
       } else {
+        $(ui.playerMoveSuccess("It's now player X's turn"))
         $(event.target).css('background-color', 'blue').text('o').addClass('taken')
         $('#playerIcon').css('background-color', 'red')
-        $('#feedback').text(`It's now Player X's turn.`)
         api.updateGame(currentBoxId, 'o')
         updateGameBoard(currentBoxId, 'o')
       }
@@ -61,9 +60,9 @@ const checkWin = () => {
     (gameBoard[3] === 'x' && gameBoard[4] === 'x' && gameBoard[5] === 'x') ||
     (gameBoard[6] === 'x' && gameBoard[7] === 'x' && gameBoard[8] === 'x') ||
     (gameBoard[6] === 'x' && gameBoard[4] === 'x' && gameBoard[2] === 'x')) {
-    $('#feedback').text(`Game Over! Player X wins!`)
-    console.log('Player X wins')
     gameOver = true
+    api.updateGameOver(gameOver)
+    ui.onGameOver('Player X wins')
   } else if (
     (gameBoard[0] === 'o' && gameBoard[1] === 'o' && gameBoard[2] === 'o') ||
     (gameBoard[0] === 'o' && gameBoard[3] === 'o' && gameBoard[6] === 'o') ||
@@ -73,13 +72,15 @@ const checkWin = () => {
     (gameBoard[3] === 'o' && gameBoard[4] === 'o' && gameBoard[5] === 'o') ||
     (gameBoard[6] === 'o' && gameBoard[7] === 'o' && gameBoard[8] === 'o') ||
     (gameBoard[6] === 'o' && gameBoard[4] === 'o' && gameBoard[2] === 'o')) {
-    console.log('Player 0 wins')
     gameOver = true
+    api.updateGameOver(gameOver)
+    ui.onGameOver('Player 0 wins')
   } else if (counter < 9) {
     console.log('keep playing')
   } else {
     gameOver = true
-    console.log('its a tie')
+    api.updateGameOver(gameOver)
+    ui.onGameOver('Ended in a Tie')
   }
 }
 
@@ -160,6 +161,7 @@ const addHandlers = event => {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#new-game').on('submit', newGame)
+  $('#restart-game').on('submit', newGame)
   $('#update-game').on('submit', updateGame)
   $('#get-games').on('submit', getAllGames)
 }

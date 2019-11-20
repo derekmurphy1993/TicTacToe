@@ -72,6 +72,25 @@ const updateGame = (currentIndex, value) => {
   })
 }
 
+const updateGameOver = (gameStatus) => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: {
+      game: {
+        cell: {
+          index: '',
+          value: ''
+        },
+        over: gameStatus
+      }
+    }
+  })
+}
+
 const getGames = (responseData) => {
   return $.ajax({
     url: config.apiUrl + '/games',
@@ -89,5 +108,6 @@ module.exports = {
   signOut,
   newGame,
   updateGame,
-  getGames
+  getGames,
+  updateGameOver
 }
