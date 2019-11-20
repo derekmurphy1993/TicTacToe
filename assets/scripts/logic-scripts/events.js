@@ -166,6 +166,8 @@ const addHandlers = event => {
   $('#get-games').on('submit', getAllGames)
 }
 
+// is game over
+
 module.exports = {
   addHandlers
 }
