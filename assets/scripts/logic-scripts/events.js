@@ -19,13 +19,13 @@ const onPlayerMove = event => {
       if (currentPlayer === true) {
         $(ui.playerMoveSuccess("It's now player O's turn"))
         $(event.target).css('background-color', 'red').text('x').addClass('taken')
-        $('#playerIcon').css('background-color', 'blue')
+        $('#playerIcon').css('background-color', 'blue').text('O')
         api.updateGame(currentBoxId, 'x')
         updateGameBoard(currentBoxId, 'x')
       } else {
         $(ui.playerMoveSuccess("It's now player X's turn"))
         $(event.target).css('background-color', 'blue').text('o').addClass('taken')
-        $('#playerIcon').css('background-color', 'red')
+        $('#playerIcon').css('background-color', 'red').text('X')
         api.updateGame(currentBoxId, 'o')
         updateGameBoard(currentBoxId, 'o')
       }
@@ -44,8 +44,6 @@ let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 const updateGameBoard = (currentIndex, value) => {
   gameBoard.splice(currentIndex, 1, value)
-  console.log(gameBoard)
-  console.log(gameOver)
 }
 
 // win conditions
@@ -76,7 +74,6 @@ const checkWin = () => {
     api.updateGameOver(gameOver)
     ui.onGameOver('Player 0 wins')
   } else if (counter < 9) {
-    console.log('keep playing')
   } else {
     gameOver = true
     api.updateGameOver(gameOver)
