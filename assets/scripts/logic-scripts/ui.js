@@ -69,6 +69,8 @@ const newGameSuccess = (gameData) => {
   store.game = gameData.game
   $('.after-newgame').show()
   $('.before-newgame').hide()
+  $('.after-game').hide()
+  $('#playerIcon').css('background-color', 'red').text('X')
 }
 
 const newGameFailure = () => {
@@ -81,7 +83,6 @@ const onGetGameSuccess = responseData => {
 }
 
 const onGetGameFailure = responseData => {
-  console.log('Error: Games Not Found.')
 }
 
 const onGameOver = (overStatment) => {
